@@ -1,0 +1,6 @@
+@Trabalho_Daniel_Locadora_veiculo_HostAddress = http://localhost:5052
+
+GET {{Trabalho_Daniel_Locadora_veiculo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
