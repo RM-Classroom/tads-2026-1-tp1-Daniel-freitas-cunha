@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trabalho-Daniel-Locadora-veiculo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12592db7562e30dc39b1f870f684055439b8e019")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf378db7055a35c8b1a195019c836b7d3ebff21d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trabalho-Daniel-Locadora-veiculo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trabalho-Daniel-Locadora-veiculo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4457,11 +4457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\Trabalho-Daniel-Locadora-veiculo\\Trabalho-Daniel-Locadora-veiculo.csproj",
+      "projectUniqueName": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\tads-2026-1-tp1-Daniel-freitas-cunha\\Trabalho-Daniel-Locadora-veiculo.csproj",
       "projectName": "Trabalho-Daniel-Locadora-veiculo",
-      "projectPath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\Trabalho-Daniel-Locadora-veiculo\\Trabalho-Daniel-Locadora-veiculo.csproj",
+      "projectPath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\tads-2026-1-tp1-Daniel-freitas-cunha\\Trabalho-Daniel-Locadora-veiculo.csproj",
       "packagesPath": "C:\\Users\\mauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\Trabalho-Daniel-Locadora-veiculo\\obj\\",
+      "outputPath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\tads-2026-1-tp1-Daniel-freitas-cunha\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

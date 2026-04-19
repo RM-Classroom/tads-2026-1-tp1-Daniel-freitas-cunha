@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Trabalho-Daniel-Locadora-veiculo",
-    "version": "1.0"
+    "title": "Locadora do Daniel",
+    "version": "v1"
   },
   "paths": {
     "/api/Categoria": {
@@ -77,6 +77,7 @@
         "tags": [
           "Cliente"
         ],
+        "summary": "Retorna a lista de todos os clientes.",
         "responses": {
           "200": {
             "description": "OK",
@@ -161,6 +162,7 @@
         "tags": [
           "Cliente"
         ],
+        "summary": "Busca um cliente pelo ID.",
         "parameters": [
           {
             "name": "id",
@@ -199,6 +201,7 @@
         "tags": [
           "Cliente"
         ],
+        "summary": "Atualiza os dados de um cliente existente.",
         "parameters": [
           {
             "name": "id",
@@ -239,6 +242,7 @@
         "tags": [
           "Cliente"
         ],
+        "summary": "Remove um cliente do sistema.",
         "parameters": [
           {
             "name": "id",
@@ -365,6 +369,7 @@
         "tags": [
           "Locacao"
         ],
+        "summary": "Registra uma nova locação de veículo.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -442,6 +447,7 @@
         "tags": [
           "Locacao"
         ],
+        "summary": "Relatório detalhado de todas as locações (Múltiplos JOINS).",
         "responses": {
           "200": {
             "description": "OK"
@@ -622,6 +628,7 @@
         "tags": [
           "Veiculo"
         ],
+        "summary": "Filtra veículos por Fabricante (Usa LEFT JOIN).",
         "parameters": [
           {
             "name": "id",
@@ -645,6 +652,7 @@
         "tags": [
           "Veiculo"
         ],
+        "summary": "Filtra veículos por Categoria (Usa LEFT JOIN).",
         "parameters": [
           {
             "name": "id",

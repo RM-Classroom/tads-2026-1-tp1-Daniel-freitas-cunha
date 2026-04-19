@@ -25,9 +25,16 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Fabricante fabricante)
         {
-            _context.Fabricantes.Add(fabricante);
-            await _context.SaveChangesAsync();
-            return Ok(fabricante);
+            try
+            {
+                _context.Fabricantes.Add(fabricante);
+                await _context.SaveChangesAsync();
+                return Ok(fabricante);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro ao cadastrar Fabricante: {ex.Message}");
+            }
         }
     }
 }

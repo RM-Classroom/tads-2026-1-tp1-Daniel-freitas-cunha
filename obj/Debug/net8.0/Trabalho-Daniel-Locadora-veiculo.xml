@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Trabalho-Daniel-Locadora-veiculo</name>
+    </assembly>
+    <members>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.ClienteController.GetClientes">
+            <summary>
+            Retorna a lista de todos os clientes.
+            </summary>
+            
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.ClienteController.GetCliente(System.Int32)">
+            <summary>
+            Busca um cliente pelo ID.
+            </summary>
+            
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.ClienteController.PutCliente(System.Int32,Trabalho_Daniel_Locadora_veiculo.Models.Cliente)">
+            <summary>
+            Atualiza os dados de um cliente existente.
+            </summary>
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.ClienteController.DeleteCliente(System.Int32)">
+            <summary>
+            Remove um cliente do sistema.
+            </summary>
+            
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.LocacaoController.Post(Trabalho_Daniel_Locadora_veiculo.Models.LocacaoCarro)">
+            <summary>
+            Registra uma nova locação de veículo.
+            </summary>
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.LocacaoController.RelatorioCompleto">
+            <summary>
+            Relatório detalhado de todas as locações (Múltiplos JOINS).
+            </summary>
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.VeiculoController.GetPorFabricante(System.Int32)">
+            <summary>
+            Filtra veículos por Fabricante (Usa LEFT JOIN).
+            </summary>
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Controllers.VeiculoController.GetPorCategoria(System.Int32)">
+            <summary>
+            Filtra veículos por Categoria (Usa LEFT JOIN).
+            </summary>
+        </member>
+        <member name="T:Trabalho_Daniel_Locadora_veiculo.Migrations.Inicial">
+            <inheritdoc />
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Migrations.Inicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Migrations.Inicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Trabalho_Daniel_Locadora_veiculo.Migrations.Inicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -16,6 +16,7 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
             _context = context;
         }
 
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Veiculo>>> Get()
         {
@@ -24,6 +25,7 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
                 .Include(v => v.Categoria)
                 .ToListAsync();
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Veiculo>> Get(int id)
@@ -38,12 +40,21 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
             return veiculo;
         }
 
+        //Metodo Post Com tratamento de Erro
+
         [HttpPost]
         public async Task<ActionResult> Post(Veiculo veiculo)
         {
-            _context.Veiculos.Add(veiculo);
-            await _context.SaveChangesAsync();
-            return Ok(veiculo);
+            try
+            {
+                _context.Veiculos.Add(veiculo);
+                await _context.SaveChangesAsync();
+                return Ok(veiculo);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest($"Erro ao cadastrar o Veiculo:{ex.Message}");
+            }
         }
 
         [HttpPut("{id}")]
@@ -69,7 +80,10 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
             return NoContent();
         }
 
-        //Filtros com Joins
+
+        /// <summary>
+        /// Filtra veículos por Fabricante (Usa LEFT JOIN).
+        /// </summary>
 
         [HttpGet("fabricante/{id}")]
         public async Task<ActionResult> GetPorFabricante(int id)
@@ -81,6 +95,12 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
 
             return Ok(result);
         }
+
+
+        /// <summary>
+        /// Filtra veículos por Categoria (Usa LEFT JOIN).
+        /// </summary>
+
 
         [HttpGet("categoria/{id}")]
         public async Task<ActionResult> GetPorCategoria(int id)

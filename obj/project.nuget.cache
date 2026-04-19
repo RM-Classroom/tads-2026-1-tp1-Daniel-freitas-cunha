@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rmoRbsFoxQg=",
+  "dgSpecHash": "6x8XSszaMv0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\Trabalho-Daniel-Locadora-veiculo\\Trabalho-Daniel-Locadora-veiculo.csproj",
+  "projectFilePath": "C:\\Users\\mauri\\OneDrive\\Área de Trabalho\\Locadora veiculo - DANIEL DE FREITAS - TRABALHO\\tads-2026-1-tp1-Daniel-freitas-cunha\\Trabalho-Daniel-Locadora-veiculo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mauri\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\mauri\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

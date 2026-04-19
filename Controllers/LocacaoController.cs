@@ -25,12 +25,23 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
                 .ToListAsync();
         }
 
+        /// <summary>
+        /// Registra uma nova locação de veículo.
+        /// </summary>
+
         [HttpPost]
         public async Task<ActionResult> Post(LocacaoCarro locacao)
         {
-            _context.Locacoes.Add(locacao);
-            await _context.SaveChangesAsync();
-            return Ok(locacao); 
+            try
+            {
+                _context.Locacoes.Add(locacao);
+                await _context.SaveChangesAsync();
+                return Ok(locacao);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest($"Não foi possivel cadastrar Locacao{ex.Message}");
+            }
         }
 
         [HttpGet("cliente/{id}")]
@@ -55,6 +66,10 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
 
             return Ok(result);
         }
+
+        /// <summary>
+        /// Relatório detalhado de todas as locações (Múltiplos JOINS).
+        /// </summary>
 
         [HttpGet("completo")]
         public async Task<ActionResult> RelatorioCompleto()

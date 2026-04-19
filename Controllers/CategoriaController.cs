@@ -25,9 +25,16 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(Categoria categoria)
         {
-            _context.Categorias.Add(categoria);
-            await _context.SaveChangesAsync();
-            return Ok(categoria);
+            try
+            {
+                _context.Categorias.Add(categoria);
+                await _context.SaveChangesAsync();
+                return Ok(categoria);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Não foi possivel Cadastrar Categoria!{ex.Message}");
+            }
         }
     }
 }

@@ -16,14 +16,22 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
             _context = context;
         }
 
-        
+        /// <summary>
+        /// Retorna a lista de todos os clientes.
+        /// </summary>
+        /// 
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
         {
             return await _context.Clientes.ToListAsync();
         }
 
- 
+        /// <summary>
+        /// Busca um cliente pelo ID.
+        /// </summary>
+        /// 
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
@@ -39,13 +47,23 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
         [HttpPost]
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
-            _context.Clientes.Add(cliente);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Clientes.Add(cliente);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);
+                return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest($"Não foi possivel Cadastrar Cliente!{ ex.Message}");
+            }
         }
 
-    
+        /// <summary>
+        /// Atualiza os dados de um cliente existente.
+        /// </summary>
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCliente(int id, Cliente cliente)
         {
@@ -58,6 +76,12 @@ namespace Trabalho_Daniel_Locadora_veiculo.Controllers
 
             return NoContent();
         }
+
+        /// <summary>
+        /// Remove um cliente do sistema.
+        /// </summary>
+        /// 
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)
         {
